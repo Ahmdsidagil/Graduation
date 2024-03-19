@@ -29,8 +29,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                GreetingText(message = "Happy Graduation Anny!!",
-                        from = "From Jhonson")
+                GreetingText(pesan = "Happy Graduation Anny!!",
+                            teks = "Selamat atas Expert yang telah di raih,Semoga kelak menjadiorang yang sukses",
+                            pengirim = "Pengirim Agil")
                 }
             }
         }
@@ -38,23 +39,37 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun GreetingText(message: String, from : String, modifier: Modifier = Modifier) {
+fun GreetingText(pesan : String, teks : String, pengirim : String, modifier: Modifier = Modifier) {
     Column (
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         modifier = modifier.padding(8.dp)
-    ){
-
+    ) {
         Text(
-            text = message,
-            fontSize = 70.sp,
-            lineHeight = 110.sp,
+            text = pesan,
+            fontSize = 65.sp,
+            lineHeight = 52.sp,
             textAlign = TextAlign.Center
-            )
-
+        )
+    }
+    Column(
+        verticalArrangement = Arrangement.Center
+    ) {
         Text(
-            text = from,
+            text = teks,
+            fontSize = 45.sp,
+            lineHeight = 52.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+    Column (
+        verticalArrangement = Arrangement.Bottom
+    ){
+        Text(
+            text = pengirim,
             fontSize = 28.sp,
-            modifire = modifier.padding(16.dp).align(alignment = Alignment.End)
+            modifier = modifier
+                .padding(16.dp)
+                .align(alignment = Alignment.End)
             )
     }
 }
@@ -64,6 +79,7 @@ fun GreetingText(message: String, from : String, modifier: Modifier = Modifier) 
 fun GreetingPreview() {
     MPappTheme {
         GreetingText("Happy Graduation Anny!!",
-        from = "From Jhonson")
+            teks = "Selamat atas Expert yang telah di raih,Semoga kelak menjadiorang yang sukses",
+            pengirim = "Pengirim Agil")
     }
 }
