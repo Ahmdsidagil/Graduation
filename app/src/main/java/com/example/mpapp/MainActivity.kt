@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                 GreetingText(pesan = "Happy Graduation Anny!!",
-                            teks = "Selamat atas Expert yang telah di raih,Semoga kelak menjadiorang yang sukses",
+                            teks = "Selamat atas Expert yang telah di raih, Semoga kelak kamu menjadi orang yang sukses!!!!",
                             pengirim = "Pengirim Agil")
                 }
             }
@@ -79,7 +79,7 @@ fun GreetingText(pesan : String, teks : String, pengirim : String, modifier: Mod
 fun GreetingPreview() {
     MPappTheme {
         GreetingText("Happy Graduation Anny!!",
-            teks = "Selamat atas Expert yang telah di raih,Semoga kelak menjadiorang yang sukses",
+            teks = "Selamat atas Expert yang telah di raih, Semoga kelak kamu menjadi orang yang sukses!!!!",
             pengirim = "Pengirim Agil")
     }
 }
